@@ -105,18 +105,16 @@ button:hover{
     /* display: flex; */
     font-size: 30px;
     position: relative;
+    background-image:linear-gradient(90deg,#4197c5 20%, #df51ad  70%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    font-weight: 435;
+    /* transition: background-image 0.4s ease-in-out, -webkit-background-clip 0.4s ease-in-out, -webkit-text-fill-color 0.4s ease-in-out; */
     /* background-color: rgba(32, 198, 227, 0.314); */
 
 }
-
-.name:hover{
-    color:#82e0e5;
-    position: relative;
-}
-
-/* .item2{
-    grid-column: span 4/auto;
-} */
 
 
 .item3,.item4,.item2,.item5{
@@ -395,31 +393,10 @@ a:visited{
 
 .img1{
     position: absolute;
-    top:12.4px;
+    top:13.1px;
     left: 13.55px;
 }
 
-
-/* @keyframes border-rotate {
-    0% {
-      box-shadow: 0 0 10px 0 rgba(201, 136, 51, 0.7);
-    }
-
-    25% {
-        border-top:1px solid rgb(220, 21, 21);
-      }
-
-    50% {
-        border-right:1px solid rgb(220, 21, 21);
-        border-top:1px solid rgb(220, 21, 21);
-    }
-    100% {
-        border-bottom:1px solid rgb(220, 21, 21);
-        border-right:1px solid rgb(220, 21, 21);
-        border-top:1px solid rgb(220, 21, 21);
-        border-left:1px solid rgb(220, 21, 21);
-    }
-  } */
 
 @keyframes glow {
     0% {
@@ -610,4 +587,31 @@ footer p{
   top:-2px;
   transform: scale(1.1);
   color: #c774bd;
+}
+
+
+
+
+@keyframes hue {
+    from {
+        /* filter: hue-rotate(0deg); */
+        /* background-image:linear-gradient(90deg,#73676f 20%, #60696d  70%); */
+        filter:brightness(30%)
+    }
+
+    to {
+        /* filter: hue-rotate(360deg); */
+        /* background-image:linear-gradient(90deg,#df51ad 20%, #4197c5  70%); */
+        filter:brightness(100%);
+    }
+
+
+    0%   {filter:brightness(30%)}
+  25%  {filter:brightness(80%)}
+  50%  {filter:brightness(100%)}
+  100% {filter:brightness(30%)}
+}
+
+.changing-color:hover {
+    animation: hue 3s infinite linear;
 }
