@@ -190,7 +190,8 @@ button:hover{
     height:120%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
     position: relative;
     top:0;
     margin: 0;
@@ -198,21 +199,48 @@ button:hover{
 
 .fixed-inner-1{
     background-color: rgba(76, 76, 76, 0.4);
-    max-width:80%;
-    min-height:64%;
-    z-index:9;
+    width:clamp(315px,355px,460px);
+    height:clamp(315px,355px,460px);
+    z-index:1;
     border-radius: 5px;
     position: relative;
-    top:-6%;
+    top:-7%;
+    margin-right:10px;
+    margin-left: 10px;
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    border-radius: 20px;
     /* overflow: hidden;
     display: flex;
     flex-direction: column; */
     backdrop-filter: blur(5px);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: width 0.48s ease-in-out,height 0.76s ease-in-out,border-radius 0.25s ease-in-out;
+    /* box-shadow: 8px 8px 5px rgb(64, 64, 64),-8px -8px 5px rgb(49, 49, 49); */
     
 
+}
+
+.logo{
+    width:clamp(315px,330px,400px);
+    height:clamp(315px,330px,400px);
+    object-fit: cover;
+    position: absolute;
+    /* top:25.3%; */
+    /* left:43.4%; */
+    top: 43%;
+    left: 50%;
+    /* align-self: center; */
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    margin-left:auto;
+    margin-right:auto;
+    /* transform: scale(1.35); */
+}
+
+.logo:hover{
+    transform: scale(0);
 }
 
 .left{
@@ -228,6 +256,9 @@ button:hover{
     gap:30px;
     text-align: justify;
     padding: 1px 6%;
+    opacity: 0;
+    transition: opacity 0.85s ease-in-out;
+    transition-delay: 0.38s;
 }
 
 h2{
@@ -260,7 +291,9 @@ a:visited{
     flex-wrap: wrap;
     align-content: center;
     width:100%;
-    height: 100%;;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
 }
 
 .right-img{
@@ -270,7 +303,7 @@ a:visited{
     transform: scale(0.8);
     border-radius: 2%;
     filter: saturate(130%);
-    transition: transform 0.12s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 
