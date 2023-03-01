@@ -217,10 +217,35 @@ button:hover{
     border-radius: 50%;
     overflow: hidden;
     transition: width 0.48s ease-in-out,height 0.76s ease-in-out,border-radius 0.25s ease-in-out;
+    /* animation: glass 2.1s infinite linear; */
+    /* animation: zoom 2.1s infinite linear; */
+    /* opacity: 0.8; */
+    
     /* box-shadow: 8px 8px 5px rgb(64, 64, 64),-8px -8px 5px rgb(49, 49, 49); */
     
 
 }
+
+/* @keyframes glass {
+
+
+    0%   {opacity: 0.75;}
+  25%  {opacity: 0.85;}
+  50%  {opacity: 1;}
+  100% {opacity: 0.75;}
+} */
+
+
+@keyframes zoom {
+
+
+    0%   {transform: scale(1);}
+  25%  {transform: scale(1.008);}
+  50%  {transform: scale(1.012);}
+  100% {transform: scale(1);}
+}
+
+
 
 .logo{
     width:clamp(315px,330px,400px);
@@ -236,12 +261,17 @@ button:hover{
     z-index: 3;
     margin-left:auto;
     margin-right:auto;
+    /* animation: zoom 2.1s infinite linear; */
+    /* transform-origin: top left;
+    transform: scale(0.9); */
     /* transform: scale(1.35); */
 }
 
 .logo:hover{
     transform: scale(0);
 }
+
+
 
 .left{
     /* background-color: rgba(109, 107, 107, 0.5); */
