@@ -1,3 +1,5 @@
+
+// border rotoate effect for all the images
 const images = document.querySelectorAll('.prod-image img');
 
 images.forEach((image) => {
@@ -15,6 +17,10 @@ images.forEach((image) => {
     }
   });
 });
+
+
+
+//logo card effect on home
 
 const logo = document.querySelector('.logo');
 const fixedInner1 = document.querySelector('.fixed-inner-1');
